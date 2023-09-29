@@ -154,7 +154,7 @@ img {
 
 }
 
-/* about sec*/
+/* home sec*/
 .home{
     position: relative;
 }
@@ -261,3 +261,4 @@ img {
 .button:hover i{
     transform: translateX(.25rem);
 }
+
