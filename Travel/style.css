@@ -25,6 +25,14 @@
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
 
+    --font-regular: 400;
+    --font-meduim: 500;
+    --font-semi-bold: 600;
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+
 
 }
 
@@ -113,6 +121,23 @@ img {
     cursor: pointer;
 }
 
+.nav__list{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
 
+.nav__link{
+    color: var(--title-color);
+    font-family: var(--second-font);
+    font-weight: var(--font-medium);
+}
+
+.nav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1.rem;
+}
 
 
