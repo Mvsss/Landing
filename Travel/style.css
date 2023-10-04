@@ -171,9 +171,26 @@ img {
 }
 
 .nav__link{
+    position: relative;
     color: var(--title-color);
     font-family: var(--second-font);
     font-weight: var(--font-medium);
+}
+
+.nav__link:hover::after{
+    width: 70%;
+    
+}
+
+.nav__link::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--title-color);
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    transition: width, .3s
 }
 
 .nav__close{
@@ -618,4 +635,10 @@ img {
 
  .show-scroll{
     bottom: 3rem;
+ }
+
+ /* active link */
+
+ .active-link::after{
+    width: 70%;
  }
