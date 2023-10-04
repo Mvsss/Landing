@@ -1,6 +1,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap");
-
+@media screen and (min-width: 1152px) {
+    :root {
+      --biggest-font-size: 5.5rem;
+      --h1-font-size: 2.5rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
 
 :root {
   --header-height: 3.5rem;
@@ -109,13 +119,28 @@ img {
 
 /* header */
 
+@media screen and (max-width: 1023px){
+    .nav__menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: hsla(0, 0%, 0%, .3);
+        width: 100%;
+        padding-block: 4rem;
+        backdrop-filter: blur(24px);
+        transition: top .4s;
+
+    }
+}
+
+
 .header {
     position: fixed;
     width: 100%;
     background-color: transparent;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: var(--z-fixed);
 }
 
 .nav{
@@ -154,7 +179,11 @@ img {
 .nav__close{
     position: absolute;
     top: 1rem;
-    right: 1.rem;
+    right: 1.5rem;
+}
+
+.show-menu{
+    top:0;
 }
 
 .blur-header::after{
